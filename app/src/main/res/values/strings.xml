@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Thirty Days App</string>
+    <string name="wellness_title">Mindful Mornings</string>
+    <string name="wellness_description">Kick off the month with a peaceful morning meditation, grounding yourself for a positive day ahead.</string>
+
+
+    <string name="hours_spent">%d hours spent</string>
+</resources>
