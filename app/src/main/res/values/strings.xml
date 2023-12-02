@@ -5,4 +5,10 @@
 
 
     <string name="hours_spent">%d hours spent</string>
+    <string name="wellness_title_2">Digital Detox</string>
+    <string name="wellness_description_2">Disconnect from social media, opt for a physical book, and immerse yourself in outdoor activities to rejuvenate your mind.\n</string>
+    <string name="wellness_title_3">Emotional Wellness</string>
+    <string name="wellness_description_3">Reflect on your emotions, acknowledging and understanding them without judgment. Consider expressing your feelings through journaling.</string>
+    <string name="wellness_title_4">Healthy Habits</string>
+    <string name="wellness_description_4">Prioritize hydration by drinking plenty of water. Focus on nourishing your body with balanced nutrition.\n</string>
 </resources>

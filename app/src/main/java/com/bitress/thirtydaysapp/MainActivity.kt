@@ -11,6 +11,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
@@ -23,7 +24,9 @@ import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
@@ -72,14 +75,14 @@ class MainActivity : ComponentActivity() {
                 .fillMaxWidth()
                 .padding(dimensionResource(R.dimen.padding_small))
         ) {
-            MindfulnessImage(self_care.imageResourceId)
-            MindfulnessInformation(self_care.wellnessTitle, self_care.wellnessDescription, self_care.timeSpent)
+            MindfulnessInformation(self_care.imageResourceId, self_care.wellnessTitle, self_care.wellnessDescription, self_care.timeSpent)
         }
 
     }
 
     @Composable
     fun MindfulnessInformation(
+        @DrawableRes imageResource: Int,
         @StringRes wellnessTitle: Int,
         @StringRes wellnessDescription: Int,
         timeSpent: Int,
@@ -91,64 +94,64 @@ class MainActivity : ComponentActivity() {
                 .fillMaxWidth(),
             shape = RoundedCornerShape(8.dp),
             colors = CardDefaults.cardColors(
-                containerColor = MaterialTheme.colorScheme.primaryContainer
+                containerColor = MaterialTheme.colorScheme.onPrimaryContainer
             )
         ) {
             Column(
                 modifier = Modifier
-                    .padding(16.dp)
                     .fillMaxWidth()
             ) {
-                Text(
-                    text = stringResource(wellnessTitle),
-                    style = TextStyle(
-                        fontWeight = FontWeight.Bold,
-                        fontSize = 20.sp,
-                        color = MaterialTheme.colorScheme.onPrimary
-                    ),
-                    modifier = Modifier.padding(bottom = 8.dp)
+                Image(
+                    painter = painterResource(id = imageResource),
+                    contentDescription = null,
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .height(180.dp)
+                        .clip(shape = RoundedCornerShape(8.dp)),
+                    contentScale = ContentScale.Crop
                 )
-                Text(
-                    text = stringResource(wellnessDescription),
-                    style = TextStyle(
-                        fontSize = 16.sp,
-                        color = MaterialTheme.colorScheme.onPrimary
-                    ),
-                    modifier = Modifier.padding(bottom = 8.dp)
-                )
-                Text(
-                    text = stringResource(R.string.hours_spent, timeSpent),
-                    style = TextStyle(
-                        fontStyle = FontStyle.Italic,
-                        color = MaterialTheme.colorScheme.onPrimary,
-                        fontSize = 14.sp
+
+                Column(
+                    modifier = Modifier
+                        .padding(16.dp)
+                        .fillMaxWidth()
+                ) {
+                    Text(
+                        text = stringResource(wellnessTitle),
+                        style = TextStyle(
+                            fontWeight = FontWeight.Bold,
+                            fontSize = 18.sp,
+                            color = MaterialTheme.colorScheme.onPrimary
+                        ),
+                        modifier = Modifier.padding(bottom = 8.dp)
                     )
-                )
+                    Text(
+                        text = stringResource(wellnessDescription),
+                        style = TextStyle(
+                            fontSize = 14.sp,
+                            color = MaterialTheme.colorScheme.onPrimary
+                        ),
+                        modifier = Modifier.padding(bottom = 8.dp)
+                    )
+                    Text(
+                        text = stringResource(R.string.hours_spent, timeSpent),
+                        style = TextStyle(
+                            fontStyle = FontStyle.Italic,
+                            color = MaterialTheme.colorScheme.onPrimary,
+                            fontSize = 12.sp
+                        )
+                    )
+                }
             }
         }
     }
 
 
 
-
-    @Composable
-    fun MindfulnessImage(@DrawableRes mindfulnessImage: Int, modifier: Modifier = Modifier) {
-
-        Image(
-            modifier = modifier
-                .size(dimensionResource(R.dimen.image_size))
-                .padding(
-                    dimensionResource(R.dimen.padding_small)
-                ),
-            painter = painterResource(mindfulnessImage),
-        contentDescription = null
-        )
-    }
-
     @Preview
     @Composable
-    fun WoofPreview() {
-        ThirtyDaysAppTheme(darkTheme = false) {
+    fun WellnessPreview() {
+        ThirtyDaysAppTheme(darkTheme = true) {
             MindfulnessInThirtyDays()
         }
     }
