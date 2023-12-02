@@ -47,25 +47,29 @@ import com.bitress.thirtydaysapp.data.Wellness
 import com.bitress.thirtydaysapp.data.self_cares
 import com.bitress.thirtydaysapp.ui.theme.Montserrat
 import com.bitress.thirtydaysapp.ui.theme.ThirtyDaysAppTheme
+import com.bitress.thirtydaysapp.ui.theme.md_theme_dark_background
 import com.bitress.thirtydaysapp.ui.theme.md_theme_dark_onPrimaryContainer
 import com.bitress.thirtydaysapp.ui.theme.md_theme_dark_onSecondary
+import com.bitress.thirtydaysapp.ui.theme.md_theme_dark_onSecondaryContainer
 import com.bitress.thirtydaysapp.ui.theme.md_theme_dark_onTertiary
 import com.bitress.thirtydaysapp.ui.theme.md_theme_dark_onTertiaryContainer
 import com.bitress.thirtydaysapp.ui.theme.md_theme_dark_primaryContainer
+import com.bitress.thirtydaysapp.ui.theme.md_theme_dark_secondaryContainer
 import com.bitress.thirtydaysapp.ui.theme.md_theme_dark_tertiary
+import com.bitress.thirtydaysapp.ui.theme.md_theme_dark_tertiaryContainer
+import com.bitress.thirtydaysapp.ui.theme.md_theme_light_background
 import com.bitress.thirtydaysapp.ui.theme.md_theme_light_onTertiaryContainer
 import com.bitress.thirtydaysapp.ui.theme.md_theme_light_primaryContainer
 import com.bitress.thirtydaysapp.ui.theme.md_theme_light_tertiary
+import com.bitress.thirtydaysapp.ui.theme.md_theme_light_tertiaryContainer
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
             ThirtyDaysAppTheme {
-                // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
                 ) {
                     MindfulnessInThirtyDays()
                 }
@@ -85,11 +89,11 @@ class MainActivity : ComponentActivity() {
                             text = "Mindfulness in 30 Days",
                             style = TextStyle(
                                 fontFamily = Montserrat,
-                                color = md_theme_light_onTertiaryContainer,
+                                color = md_theme_dark_background,
                                 fontSize = 20.sp
                             ))
                     },
-                    colors = TopAppBarDefaults.smallTopAppBarColors(containerColor = md_theme_light_primaryContainer)
+                    colors = TopAppBarDefaults.smallTopAppBarColors(containerColor = md_theme_light_tertiaryContainer)
                 )
             }
         ) {
@@ -139,7 +143,7 @@ class MainActivity : ComponentActivity() {
                 .fillMaxWidth(),
             shape = RoundedCornerShape(8.dp),
             colors = CardDefaults.cardColors(
-                containerColor = MaterialTheme.colorScheme.onPrimaryContainer
+                containerColor = md_theme_dark_secondaryContainer
             )
         ) {
             Column(
@@ -166,7 +170,7 @@ class MainActivity : ComponentActivity() {
                         style = TextStyle(
                             fontWeight = FontWeight.Bold,
                             fontSize = 18.sp,
-                            color = MaterialTheme.colorScheme.onPrimary
+                            color = md_theme_dark_onSecondaryContainer
                         ),
                         modifier = Modifier.padding(bottom = 8.dp)
                     )
@@ -174,7 +178,7 @@ class MainActivity : ComponentActivity() {
                         text = stringResource(wellnessDescription),
                         style = TextStyle(
                             fontSize = 14.sp,
-                            color = MaterialTheme.colorScheme.onPrimary
+                            color = md_theme_dark_onSecondaryContainer
                         ),
                         modifier = Modifier.padding(bottom = 8.dp)
                     )
@@ -182,7 +186,7 @@ class MainActivity : ComponentActivity() {
                         text = stringResource(R.string.hours_spent, timeSpent),
                         style = TextStyle(
                             fontStyle = FontStyle.Italic,
-                            color = MaterialTheme.colorScheme.onPrimary,
+                            color = md_theme_dark_onSecondaryContainer,
                             fontSize = 12.sp
                         )
                     )

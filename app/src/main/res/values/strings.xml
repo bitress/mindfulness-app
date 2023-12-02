@@ -1,14 +1,67 @@
 <resources>
     <string name="app_name">Thirty Days App</string>
-    <string name="wellness_title">Mindful Mornings</string>
-    <string name="wellness_description">Kick off the month with a peaceful morning meditation, grounding yourself for a positive day ahead.</string>
-
 
     <string name="hours_spent">%d hours spent</string>
+
+    <string name="wellness_title">Mindful Mornings</string>
+    <string name="wellness_description">Kick off the month with a peaceful morning meditation, grounding yourself for a positive day ahead.</string>
     <string name="wellness_title_2">Digital Detox</string>
     <string name="wellness_description_2">Disconnect from social media, opt for a physical book, and immerse yourself in outdoor activities to rejuvenate your mind.\n</string>
     <string name="wellness_title_3">Emotional Wellness</string>
     <string name="wellness_description_3">Reflect on your emotions, acknowledging and understanding them without judgment. Consider expressing your feelings through journaling.</string>
     <string name="wellness_title_4">Healthy Habits</string>
     <string name="wellness_description_4">Prioritize hydration by drinking plenty of water. Focus on nourishing your body with balanced nutrition.\n</string>
+    <string name="wellness_title_5">Creativity Boost</string>
+    <string name="wellness_description_5">Explore your creative side with a cooking session, experimenting with new recipes and flavors.</string>
+    <string name="wellness_title_6">Relaxation Techniques</string>
+    <string name="wellness_description_6">Treat yourself to a relaxing hot bath or spa activities. Let go of stress and unwind in a calming environment.</string>
+    <string name="wellness_title_7">Mindful Walking</string>
+    <string name="wellness_description_7">Take a mindful walk, paying attention to your surroundings, and enjoying the present moment. Breathe in the fresh air.</string>
+    <string name="wellness_title_8">Gratitude Journaling</string>
+    <string name="wellness_description_8">Start a gratitude journal, noting down three things youre thankful for each day. Cultivate a positive mindset.</string>
+    <string name="wellness_title_9">Deep Breathing Exercises</string>
+    <string name="wellness_description_9">Practice deep breathing exercises to center yourself. Inhale slowly, hold, exhale, and repeat.</string>
+    <string name="wellness_title_10">Stretching and Yoga</string>
+    <string name="wellness_description_10">Engage in a gentle stretching or yoga routine to enhance flexibility and promote relaxation.</string>
+    <string name="wellness_title_11">No Social Media Day</string>
+    <string name="wellness_description_11">Take a break from social media to reduce screen time and focus on real-world connections.</string>
+    <string name="wellness_title_12">Read a Physical Book</string>
+    <string name="wellness_description_12">Immerse yourself in a physical book, allowing your mind to escape into a different world.</string>
+    <string name="wellness_title_13">Outdoor Nature Walk</string>
+    <string name="wellness_description_13">Spend time in nature, whether its a park, trail, or your backyard. Connect with the environment around you.</string>
+    <string name="wellness_title_14">Unplug and Relax</string>
+    <string name="wellness_description_14">Designate time to unplug from electronic devices. Enjoy moments of quiet and relaxation.</string>
+    <string name="wellness_title_15">Creative Writing Session</string>
+    <string name="wellness_description_15">Express yourself through creative writing. Write a short story, poem, or simply journal your thoughts.</string>
+    <string name="wellness_title_16">Reflect on Emotions</string>
+    <string name="wellness_description_16">Take a moment to reflect on your emotions. Identify and acknowledge them without judgment.</string>
+    <string name="wellness_title_17">Practice Self-Compassion</string>
+    <string name="wellness_description_17">Be kind to yourself. Practice self-compassion by treating yourself with the same kindness you would offer a friend.</string>
+    <string name="wellness_title_18">Connect with Loved Ones</string>
+    <string name="wellness_description_18">Reach out to friends or family. Foster connections and share positive moments with loved ones.</string>
+    <string name="wellness_title_19">Mindful Coloring</string>
+    <string name="wellness_description_19">Engage in mindful coloring. Let your creativity flow and focus on the colors and patterns.</string>
+    <string name="wellness_title_20">Gratitude Jar</string>
+    <string name="wellness_description_20">Create a gratitude jar. Write down things youre thankful for and add them to the jar throughout the month.</string>
+    <string name="wellness_title_21">Hydration Day</string>
+    <string name="wellness_description_21">Prioritize hydration by drinking at least 8 glasses of water. Hydrate your body for overall well-being.</string>
+    <string name="wellness_title_22">Balanced Nutrition Day</string>
+    <string name="wellness_description_22">Focus on balanced nutrition. Prepare a meal with a variety of colorful, nutrient-rich ingredients.</string>
+    <string name="wellness_title_23">8 Hours of Sleep</string>
+    <string name="wellness_description_23">Prioritize a full nights sleep. Ensure you get a restful 8 hours to support your physical and mental health.</string>
+    <string name="wellness_title_24">Mindful Eating</string>
+    <string name="wellness_description_24">Practice mindful eating. Pay attention to the flavors, textures, and sensations of each bite.</string>
+    <string name="wellness_title_25">Body Scan Meditation</string>
+    <string name="wellness_description_25">Try a body scan meditation. Bring awareness to each part of your body, releasing tension and promoting relaxation.</string>
+    <string name="wellness_title_26">Hot Bath or Spa Day</string>
+    <string name="wellness_description_26">Indulge in a soothing hot bath or create a spa day at home. Pamper yourself and unwind.</string>
+    <string name="wellness_title_27">Listen to Calming Music</string>
+    <string name="wellness_description_27">Create a playlist of calming music. Take a moment to listen and let the music soothe your mind.</string>
+    <string name="wellness_title_28">Guided Imagery Meditation</string>
+    <string name="wellness_description_28">Practice guided imagery meditation. Visualize a peaceful place to relax and rejuvenate your mind.</string>
+    <string name="wellness_title_29">Aromatherapy</string>
+    <string name="wellness_description_29">Explore aromatherapy. Use essential oils or scented candles to create a calming atmosphere.</string>
+    <string name="wellness_title_30">Reflection and Goal Setting</string>
+    <string name="wellness_description_30">Reflect on the month. Set new self-care goals and continue incorporating mindfulness practices into your routine.</string>
+
 </resources>
