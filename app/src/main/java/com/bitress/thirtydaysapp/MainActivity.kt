@@ -1,5 +1,6 @@
 package com.bitress.thirtydaysapp
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -9,6 +10,7 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -19,9 +21,14 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.CenterAlignedTopAppBar
+import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
+import androidx.compose.material3.TopAppBar
+import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -38,7 +45,17 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.bitress.thirtydaysapp.data.Wellness
 import com.bitress.thirtydaysapp.data.self_cares
+import com.bitress.thirtydaysapp.ui.theme.Montserrat
 import com.bitress.thirtydaysapp.ui.theme.ThirtyDaysAppTheme
+import com.bitress.thirtydaysapp.ui.theme.md_theme_dark_onPrimaryContainer
+import com.bitress.thirtydaysapp.ui.theme.md_theme_dark_onSecondary
+import com.bitress.thirtydaysapp.ui.theme.md_theme_dark_onTertiary
+import com.bitress.thirtydaysapp.ui.theme.md_theme_dark_onTertiaryContainer
+import com.bitress.thirtydaysapp.ui.theme.md_theme_dark_primaryContainer
+import com.bitress.thirtydaysapp.ui.theme.md_theme_dark_tertiary
+import com.bitress.thirtydaysapp.ui.theme.md_theme_light_onTertiaryContainer
+import com.bitress.thirtydaysapp.ui.theme.md_theme_light_primaryContainer
+import com.bitress.thirtydaysapp.ui.theme.md_theme_light_tertiary
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -56,16 +73,43 @@ class MainActivity : ComponentActivity() {
         }
     }
 
+    @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
+    @OptIn(ExperimentalMaterial3Api::class)
     @Composable
     fun MindfulnessInThirtyDays() {
-        LazyColumn {
-            items(self_cares) {
-                MindfulnessItem (self_care = it)
+        Scaffold(
+            topBar = {
+                CenterAlignedTopAppBar(
+                    title = {
+                        Text(
+                            text = "Mindfulness in 30 Days",
+                            style = TextStyle(
+                                fontFamily = Montserrat,
+                                color = md_theme_light_onTertiaryContainer,
+                                fontSize = 20.sp
+                            ))
+                    },
+                    colors = TopAppBarDefaults.smallTopAppBarColors(containerColor = md_theme_light_primaryContainer)
+                )
+            }
+        ) {
+            Column(
+                modifier = Modifier
+                    .padding(16.dp)
+                    .fillMaxSize()
+            ) {
+                Spacer(modifier = Modifier.height(40.dp))
+                LazyColumn {
+                    items(self_cares) {
+                        MindfulnessItem(self_care = it)
+                    }
+                }
             }
         }
     }
 
-     @Composable
+
+    @Composable
     fun MindfulnessItem(
          self_care: Wellness,
          modifier: Modifier = Modifier
@@ -73,7 +117,7 @@ class MainActivity : ComponentActivity() {
         Row (
             modifier = modifier
                 .fillMaxWidth()
-                .padding(dimensionResource(R.dimen.padding_small))
+                .padding(8.dp)
         ) {
             MindfulnessInformation(self_care.imageResourceId, self_care.wellnessTitle, self_care.wellnessDescription, self_care.timeSpent)
         }
@@ -88,6 +132,7 @@ class MainActivity : ComponentActivity() {
         timeSpent: Int,
         modifier: Modifier = Modifier
     ) {
+
         Card(
             modifier = modifier
                 .padding(16.dp)
